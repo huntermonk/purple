@@ -3,6 +3,16 @@ import UIKit
 final class StickersTableViewController: UITableViewController {
 
     private var stickers = Sticker.all
+    var selected: (Sticker) -> Void
+
+    init(selected: @escaping (Sticker) -> Void) {
+        self.selected = selected
+        super.init(style: .plain)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +40,8 @@ extension StickersTableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sticker = stickers[indexPath.row]
-        print(sticker.title)
+        selected(sticker)
+        dismiss(animated: true, completion: nil)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

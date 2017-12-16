@@ -3,6 +3,7 @@ import ARKit
 
 class CameraController: UIViewController {
 
+    var currentSticker: SCNNode?
     @IBOutlet var sceneView: ARSCNView!
 
     override func prefersHomeIndicatorAutoHidden() -> Bool {
@@ -53,7 +54,10 @@ class CameraController: UIViewController {
     }
 
     @objc private func showStickers(button: UIButton) {
-        present(controller: StickersTableViewController(), from: button)
+        let stickers = StickersTableViewController { [unowned self] sticker in
+            self.currentSticker = sticker.node
+        }
+        present(controller: stickers, from: button)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -63,12 +67,14 @@ class CameraController: UIViewController {
 
 extension CameraController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode.brazzers
+        guard let sticker = currentSticker else {
+            return nil
+        }
 
         let constraint = SCNBillboardConstraint()
         constraint.freeAxes = SCNBillboardAxis.Y
 
-        node.constraints = [constraint]
-        return node
+        sticker.constraints = [constraint]
+        return sticker
     }
 }
