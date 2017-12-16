@@ -13,6 +13,10 @@ struct Sticker {
         return Sticker(node: SCNNode.brazzers, keyword: "brazzers", title: "😈")
     }
 
+    static var drake: Sticker {
+        return Sticker(node: SCNNode.brazzers, keyword: "drake", title: "🦉")
+    }
+
     static var kanyeGlasses: Sticker {
         return Sticker(node: SCNNode.kanyeGlasses, keyword: "kanye west glasses", title: "🐐")
     }
