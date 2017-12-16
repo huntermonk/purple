@@ -8,15 +8,17 @@ extension SCNNode {
     }
 
     static var brazzers: SCNNode {
-        let plane = SCNPlane(width: 0.35, height: 0.082)
+        return node(image: #imageLiteral(resourceName: "brazzers"), width: 0.35, height: 0.082)
+    }
+
+    static func node(image: UIImage, width: CGFloat, height: CGFloat) -> SCNNode {
+        let plane = SCNPlane(width: width, height: height)
 
         let material = SCNMaterial()
-        material.diffuse.contents = #imageLiteral(resourceName: "brazzers")
+        material.diffuse.contents = image
         plane.materials = [material]
 
         let parent = SCNNode(geometry: plane)
         return parent
     }
 }
-
-
