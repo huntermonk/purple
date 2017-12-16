@@ -6,6 +6,8 @@ extension UIViewController {
         nav.modalPresentationStyle = .popover
         nav.popoverPresentationController?.delegate = self
 
+        present(nav, animated: true, completion: nil)
+
         nav.popoverPresentationController?.sourceView = button
         nav.popoverPresentationController?.sourceRect = button.bounds
     }
