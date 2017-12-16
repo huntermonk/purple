@@ -29,7 +29,7 @@ class CameraController: UIViewController {
     }
 
     private func addAtHit(touches: Set<UITouch>) {
-        addAnchor(distance: 2, camera: sceneView.session.currentFrame!.camera.transform)
+        addAnchor(distance: 0.5, camera: sceneView.session.currentFrame!.camera.transform)
     }
 
     private func addAnchor(distance: Float, camera: matrix_float4x4) {

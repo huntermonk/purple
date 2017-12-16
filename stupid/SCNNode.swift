@@ -19,6 +19,10 @@ extension SCNNode {
         return node(image: #imageLiteral(resourceName: "kanye-glasses"), width: 0.2, height: 0.2)
     }
 
+    static var lightbulb: SCNNode {
+        return node(image: #imageLiteral(resourceName: "lightbulb"), width: 0.758, height: 0.8)
+    }
+
     static var mustache: SCNNode {
         return node(image: #imageLiteral(resourceName: "mustache"), width: 0.256, height: 0.128)
     }

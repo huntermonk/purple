@@ -17,6 +17,10 @@ struct Sticker {
         return Sticker(node: SCNNode.kanyeGlasses, keyword: "kanye west glasses", title: "🐐")
     }
 
+    static var lightbulb: Sticker {
+        return Sticker(node: SCNNode.lightbulb, keyword: "light bulb", title: "💡")
+    }
+
     static var mustache: Sticker {
         return Sticker(node: SCNNode.mustache, keyword: "mustache", title: "👨🏽")
     }
@@ -30,6 +34,7 @@ struct Sticker {
             angel,
             brazzers,
             kanyeGlasses,
+            lightbulb,
             mustache,
             sunglasses
         ]
