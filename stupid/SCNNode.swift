@@ -32,6 +32,7 @@ extension SCNNode {
 
         let material = SCNMaterial()
         material.diffuse.contents = image
+        material.isDoubleSided = true
         plane.materials = [material]
 
         let parent = SCNNode(geometry: plane)
