@@ -13,6 +13,8 @@ class CameraController: UIViewController {
         super.viewDidLoad()
         sceneView.delegate = self
         sceneView.showsStatistics = false
+
+        addButton()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -27,7 +29,6 @@ class CameraController: UIViewController {
 
     private func addAtHit(touches: Set<UITouch>) {
         addAnchor(distance: 2, camera: sceneView.session.currentFrame!.camera.transform)
-        sceneView.removeAnchors()
     }
 
     private func addAnchor(distance: Float, camera: matrix_float4x4) {
@@ -45,14 +46,14 @@ class CameraController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
         button.constrain(size: CGSize(width: 40, height: 40))
-        button.pinTopMargin(constant: 16)
+        button.pinBottom(constant: 16)
         button.pinRight(constant: -16)
         button.showsTouchWhenHighlighted = true
         button.addTarget(self, action: #selector(showStickers), for: .touchUpInside)
     }
 
-    @objc private func showStickers() {
-        
+    @objc private func showStickers(button: UIButton) {
+        present(controller: StickersTableController(), from: button)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -75,7 +76,7 @@ final class StickersTableController: UITableViewController {
         tableView.separatorEffect = UIVibrancyEffect(blurEffect: UIBlurEffect(style: .light))
         tableView.backgroundColor = .clear
 
-        let size = CGSize(width: 250, height: 400)
+        let size = CGSize(width: 100, height: 400)
         tableView.frame = CGRect(origin: CGPoint.zero, size: size)
         preferredContentSize = size
     }
@@ -137,6 +138,7 @@ extension StickersTableController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = stickers[indexPath.row].title
+        cell.backgroundColor = .clear
         return cell
     }
 
