@@ -16,6 +16,8 @@
 		658960961FE5BC6000DA5DB4 /* ARSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658960951FE5BC6000DA5DB4 /* ARSCNView.swift */; };
 		6590F1961FE5D3340029A016 /* StickersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590F1951FE5D3340029A016 /* StickersTableViewController.swift */; };
 		6590F1981FE5D3820029A016 /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590F1971FE5D3820029A016 /* Sticker.swift */; };
+		6590F1A11FE5E8620029A016 /* drake.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6590F19F1FE5E8620029A016 /* drake.mp4 */; };
+		6590F1A21FE5E8620029A016 /* drake-mask.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6590F1A01FE5E8620029A016 /* drake-mask.mp4 */; };
 		65AB061E1FE5C71D0015444C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061D1FE5C71D0015444C /* UIView.swift */; };
 		65AB06201FE5C9600015444C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061F1FE5C95F0015444C /* UIViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		658960951FE5BC6000DA5DB4 /* ARSCNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSCNView.swift; sourceTree = "<group>"; };
 		6590F1951FE5D3340029A016 /* StickersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersTableViewController.swift; sourceTree = "<group>"; };
 		6590F1971FE5D3820029A016 /* Sticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		6590F19F1FE5E8620029A016 /* drake.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = drake.mp4; sourceTree = "<group>"; };
+		6590F1A01FE5E8620029A016 /* drake-mask.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "drake-mask.mp4"; sourceTree = "<group>"; };
 		65AB061D1FE5C71D0015444C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		65AB061F1FE5C95F0015444C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +72,7 @@
 			children = (
 				658960971FE5BC6D00DA5DB4 /* Extensions */,
 				658960991FE5BC8000DA5DB4 /* Supporting Files */,
+				6590F19E1FE5E8520029A016 /* Videos */,
 				658960911FE5BC1000DA5DB4 /* CameraController.swift */,
 				6590F1971FE5D3820029A016 /* Sticker.swift */,
 				6590F1951FE5D3340029A016 /* StickersTableViewController.swift */,
@@ -96,6 +101,15 @@
 				658960831FE5ADBA00DA5DB4 /* Main.storyboard */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6590F19E1FE5E8520029A016 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				6590F1A01FE5E8620029A016 /* drake-mask.mp4 */,
+				6590F19F1FE5E8620029A016 /* drake.mp4 */,
+			);
+			name = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +173,9 @@
 			files = (
 				6589608A1FE5ADBA00DA5DB4 /* LaunchScreen.storyboard in Resources */,
 				658960871FE5ADBA00DA5DB4 /* Assets.xcassets in Resources */,
+				6590F1A21FE5E8620029A016 /* drake-mask.mp4 in Resources */,
 				658960851FE5ADBA00DA5DB4 /* Main.storyboard in Resources */,
+				6590F1A11FE5E8620029A016 /* drake.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
