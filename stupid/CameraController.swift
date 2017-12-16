@@ -53,95 +53,12 @@ class CameraController: UIViewController {
     }
 
     @objc private func showStickers(button: UIButton) {
-        present(controller: StickersTableController(), from: button)
+        present(controller: StickersTableViewController(), from: button)
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         addAtHit(touches: touches)
     }
-}
-
-final class StickersTableController: UITableViewController {
-
-    var stickers = Sticker.all
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup(table: tableView)
-        title = "Stickers"
-    }
-
-    private func setup(table: UITableView) {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.separatorEffect = UIVibrancyEffect(blurEffect: UIBlurEffect(style: .light))
-        tableView.backgroundColor = .clear
-
-        let size = CGSize(width: 100, height: 400)
-        tableView.frame = CGRect(origin: CGPoint.zero, size: size)
-        preferredContentSize = size
-    }
-}
-
-struct Sticker {
-    var node: SCNNode
-    var keyword: String
-    var title: String
-
-    static var angel: Sticker {
-        return Sticker(node: SCNNode.angelWings, keyword: "angel wings", title: "😇")
-    }
-
-    static var brazzers: Sticker {
-        return Sticker(node: SCNNode.brazzers, keyword: "brazzers", title: "😈")
-    }
-
-    static var kanyeGlasses: Sticker {
-        return Sticker(node: SCNNode.kanyeGlasses, keyword: "kanye west glasses", title: "🐐")
-    }
-
-    static var mustache: Sticker {
-        return Sticker(node: SCNNode.mustache, keyword: "mustache", title: "👨🏽")
-    }
-
-    static var sunglasses: Sticker {
-        return Sticker(node: SCNNode.sunglasses, keyword: "glasses, deal with it", title: "🕶")
-    }
-
-    static var all: [Sticker] {
-        return [
-            angel,
-            brazzers,
-            kanyeGlasses,
-            mustache,
-            sunglasses
-        ]
-    }
-
-}
-
-// MARK: - Table view data source
-extension StickersTableController {
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sticker = stickers[indexPath.row]
-        print(sticker.title)
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stickers.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = stickers[indexPath.row].title
-        cell.backgroundColor = .clear
-        return cell
-    }
-
 }
 
 extension CameraController: ARSCNViewDelegate {
@@ -155,4 +72,3 @@ extension CameraController: ARSCNViewDelegate {
         return node
     }
 }
-
