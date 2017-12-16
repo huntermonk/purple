@@ -52,7 +52,7 @@ class CameraController: UIViewController {
     }
 
     @objc private func showStickers() {
-
+        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -62,7 +62,7 @@ class CameraController: UIViewController {
 
 final class StickersTableController: UITableViewController {
 
-    var stickers: [Sticker] = []
+    var stickers = Sticker.all
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +87,7 @@ struct Sticker {
     var title: String
 
     static var angel: Sticker {
-        return Sticker(node: SCNNode(), keyword: "angel wings", title: "😇")
+        return Sticker(node: SCNNode.angelWings, keyword: "angel wings", title: "😇")
     }
 
     static var brazzers: Sticker {
@@ -95,15 +95,25 @@ struct Sticker {
     }
 
     static var kanyeGlasses: Sticker {
-        return Sticker(node: SCNNode.brazzers, keyword: "kanye west glasses", title: "🐐")
+        return Sticker(node: SCNNode.kanyeGlasses, keyword: "kanye west glasses", title: "🐐")
     }
 
     static var mustache: Sticker {
-        return Sticker(node: SCNNode.brazzers, keyword: "mustache", title: "👨🏽")
+        return Sticker(node: SCNNode.mustache, keyword: "mustache", title: "👨🏽")
     }
 
     static var sunglasses: Sticker {
-        return Sticker(node: SCNNode.brazzers, keyword: "glasses, deal with it", title: "🕶")
+        return Sticker(node: SCNNode.sunglasses, keyword: "glasses, deal with it", title: "🕶")
+    }
+
+    static var all: [Sticker] {
+        return [
+            angel,
+            brazzers,
+            kanyeGlasses,
+            mustache,
+            sunglasses
+        ]
     }
 
 }
