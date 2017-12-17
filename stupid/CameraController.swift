@@ -62,6 +62,8 @@ class CameraController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // TODO: - Only remove other videos
+        sceneView.removeAnchors()
         addAtHit(touches: touches)
     }
 }
