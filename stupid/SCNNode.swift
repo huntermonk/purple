@@ -16,7 +16,7 @@ extension SCNNode {
     }
     
     static var drake: SCNNode {
-        return node(image: #imageLiteral(resourceName: "brazzers"), width: 0.35, height: 0.082)
+        return masked(opaque: "drake.mp4", alpha: "drake-mask.mp4", contentSize: CGSize(width: 1280, height: 720), lifeSize: CGSize(width: 3.2512, height: 1.8288))
     }
 
     static var kanyeGlasses: SCNNode {
@@ -25,6 +25,10 @@ extension SCNNode {
 
     static var lightbulb: SCNNode {
         return node(image: #imageLiteral(resourceName: "lightbulb"), width: 0.758, height: 0.8)
+    }
+
+    static var missiles: SCNNode {
+        return masked(opaque: "missiles.mp4", alpha: "missiles-mask.mp4", contentSize: CGSize(width: 1280, height: 720), lifeSize: CGSize(width: 3.84, height: 2.16))
     }
 
     static var mustache: SCNNode {

@@ -21,6 +21,8 @@
 		6590F1A41FE5E92E0029A016 /* MaskedMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590F1A31FE5E92E0029A016 /* MaskedMaterial.swift */; };
 		6590F1A61FE5E94F0029A016 /* VideoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590F1A51FE5E94F0029A016 /* VideoContent.swift */; };
 		6590F1A81FE5E9900029A016 /* Syncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590F1A71FE5E9900029A016 /* Syncer.swift */; };
+		6590F1AB1FE5F0020029A016 /* missiles-mask.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6590F1A91FE5F0010029A016 /* missiles-mask.mp4 */; };
+		6590F1AC1FE5F0020029A016 /* missiles.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6590F1AA1FE5F0010029A016 /* missiles.mp4 */; };
 		65AB061E1FE5C71D0015444C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061D1FE5C71D0015444C /* UIView.swift */; };
 		65AB06201FE5C9600015444C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061F1FE5C95F0015444C /* UIViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		6590F1A31FE5E92E0029A016 /* MaskedMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedMaterial.swift; sourceTree = "<group>"; };
 		6590F1A51FE5E94F0029A016 /* VideoContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContent.swift; sourceTree = "<group>"; };
 		6590F1A71FE5E9900029A016 /* Syncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syncer.swift; sourceTree = "<group>"; };
+		6590F1A91FE5F0010029A016 /* missiles-mask.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "missiles-mask.mp4"; sourceTree = "<group>"; };
+		6590F1AA1FE5F0010029A016 /* missiles.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = missiles.mp4; sourceTree = "<group>"; };
 		65AB061D1FE5C71D0015444C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		65AB061F1FE5C95F0015444C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +121,8 @@
 			children = (
 				6590F1A01FE5E8620029A016 /* drake-mask.mp4 */,
 				6590F19F1FE5E8620029A016 /* drake.mp4 */,
+				6590F1A91FE5F0010029A016 /* missiles-mask.mp4 */,
+				6590F1AA1FE5F0010029A016 /* missiles.mp4 */,
 			);
 			name = Videos;
 			sourceTree = "<group>";
@@ -180,8 +186,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6590F1AB1FE5F0020029A016 /* missiles-mask.mp4 in Resources */,
 				6589608A1FE5ADBA00DA5DB4 /* LaunchScreen.storyboard in Resources */,
 				658960871FE5ADBA00DA5DB4 /* Assets.xcassets in Resources */,
+				6590F1AC1FE5F0020029A016 /* missiles.mp4 in Resources */,
 				6590F1A21FE5E8620029A016 /* drake-mask.mp4 in Resources */,
 				658960851FE5ADBA00DA5DB4 /* Main.storyboard in Resources */,
 				6590F1A11FE5E8620029A016 /* drake.mp4 in Resources */,
