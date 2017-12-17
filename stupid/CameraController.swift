@@ -3,7 +3,7 @@ import ARKit
 
 class CameraController: UIViewController {
 
-    var currentSticker: Sticker?
+    private var currentSticker: Sticker?
     @IBOutlet var sceneView: ARSCNView!
 
     override func prefersHomeIndicatorAutoHidden() -> Bool {
@@ -15,7 +15,8 @@ class CameraController: UIViewController {
         sceneView.delegate = self
         sceneView.showsStatistics = false
 
-        addButton()
+        addRecordButton()
+        addStickerButton()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -41,16 +42,47 @@ class CameraController: UIViewController {
         sceneView.session.add(anchor: anchor)
     }
 
-    private func addButton() {
+    private func addRecordButton() {
+        let button = UIButton()
+        button.setImage(#imageLiteral(resourceName: "record"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "recording"), for: .selected)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(button)
+        button.constrain(size: CGSize(width: 44, height: 44))
+        button.pinBottom(constant: 8)
+        button.centerX()
+        button.showsTouchWhenHighlighted = true
+        button.addTarget(self, action: #selector(recordPressed), for: .touchUpInside)
+    }
+
+    private func addStickerButton() {
         let button = UIButton()
         button.setImage(#imageLiteral(resourceName: "sticker"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
         button.constrain(size: CGSize(width: 40, height: 40))
-        button.pinBottom(constant: 16)
+        button.pinBottom(constant: 8)
         button.pinRight(constant: -16)
         button.showsTouchWhenHighlighted = true
         button.addTarget(self, action: #selector(showStickers), for: .touchUpInside)
+    }
+
+    private func beginRecording() {
+
+    }
+
+    private func endRecording() {
+
+    }
+
+    @objc private func recordPressed(button: UIButton) {
+        button.isSelected = !button.isSelected
+
+        if button.isSelected {
+            beginRecording()
+        } else {
+            endRecording()
+        }
     }
 
     @objc private func showStickers(button: UIButton) {
@@ -69,6 +101,7 @@ class CameraController: UIViewController {
 }
 
 extension CameraController: ARSCNViewDelegate {
+
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let sticker = currentSticker else {
             return nil
@@ -83,3 +116,4 @@ extension CameraController: ARSCNViewDelegate {
         return node
     }
 }
+

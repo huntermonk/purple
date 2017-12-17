@@ -58,6 +58,12 @@ extension UIView {
             ])
     }
 
+    func centerX() {
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self, attribute: .centerX, relatedBy: .equal, toItem: superview, attribute: .centerX, multiplier: 1, constant: 0)
+            ])
+    }
+
     @discardableResult func pinBottom(constant: CGFloat) -> NSLayoutConstraint {
         let constraint = NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: superview, attribute: .bottomMargin, multiplier: 1, constant: constant)
         NSLayoutConstraint.activate([constraint])
