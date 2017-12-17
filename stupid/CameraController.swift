@@ -1,9 +1,11 @@
 import SpriteKit
 import ARKit
+import ARVideoKit
 
 class CameraController: UIViewController {
 
     private var currentSticker: Sticker?
+    private var recorder: RecordAR!
     @IBOutlet var sceneView: ARSCNView!
 
     override func prefersHomeIndicatorAutoHidden() -> Bool {
@@ -12,6 +14,7 @@ class CameraController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        recorder = RecordAR(ARSceneKit: sceneView)
         sceneView.delegate = self
         sceneView.showsStatistics = false
 
@@ -21,11 +24,14 @@ class CameraController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        sceneView.session.run(ARWorldTrackingConfiguration())
+        let config = ARWorldTrackingConfiguration()
+        recorder.prepare(config)
+        sceneView.session.run(config)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        recorder.rest()
         sceneView.session.pause()
     }
 
@@ -68,11 +74,11 @@ class CameraController: UIViewController {
     }
 
     private func beginRecording() {
-
+        recorder.record()
     }
 
     private func endRecording() {
-
+        recorder.stopAndExport()
     }
 
     @objc private func recordPressed(button: UIButton) {
