@@ -78,7 +78,14 @@ class CameraController: UIViewController {
     }
 
     private func endRecording() {
-        recorder.stopAndExport()
+        recorder.stopAndExport { [weak self] _, _, success in
+            let title = success ? "Recording Saved" : "Recording Failed"
+            let message = success ? "Your recording was saved to your camera roll." : "Your recording failed when saving to camera roll."
+
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        }
     }
 
     @objc private func recordPressed(button: UIButton) {
