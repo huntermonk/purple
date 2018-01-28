@@ -59,7 +59,7 @@ class CameraController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
         button.constrain(size: CGSize(width: 44, height: 44))
-        button.pinBottom(constant: 8)
+        button.pinBottom(constant: -8)
         button.centerX()
         button.showsTouchWhenHighlighted = true
         button.addTarget(self, action: #selector(recordPressed), for: .touchUpInside)
@@ -72,7 +72,7 @@ class CameraController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
         button.constrain(size: CGSize(width: 40, height: 40))
-        button.pinBottom(constant: 8)
+        button.pinBottom(constant: -12)
         button.pinRight(constant: -16)
         button.showsTouchWhenHighlighted = true
         button.addTarget(self, action: #selector(showStickers), for: .touchUpInside)
