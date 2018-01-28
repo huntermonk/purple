@@ -12,7 +12,7 @@ enum Sticker {
         case .drake:
             return "🦉"
         case .kanyeGlasses:
-            return "🐐"
+            return "🕶"
         case .lightbulb:
             return "💡"
         case .missiles:
