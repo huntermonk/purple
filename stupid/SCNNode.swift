@@ -18,10 +18,10 @@ extension SCNNode {
             self.init(geometry: SCNNode.node(image: #imageLiteral(resourceName: "lightbulb"), width: 0.758, height: 0.8))
         case .missiles:
             self.init(geometry: SCNNode.masked(opaque: "missiles.mp4", alpha: "missiles-mask.mp4", contentSize: CGSize(width: 1280, height: 720), lifeSize: CGSize(width: 3.84, height: 2.16)))
-        case .mustache:
-            self.init(geometry: SCNNode.node(image: #imageLiteral(resourceName: "mustache"), width: 0.256, height: 0.128))
-        case .sunglasses:
-            self.init(geometry: SCNNode.node(image: #imageLiteral(resourceName: "sunglasses"), width: 0.2048, height: 0.0456))
+//        case .mustache:
+//            self.init(geometry: SCNNode.node(image: #imageLiteral(resourceName: "mustache"), width: 0.256, height: 0.128))
+//        case .sunglasses:
+//            self.init(geometry: SCNNode.node(image: #imageLiteral(resourceName: "sunglasses"), width: 0.2048, height: 0.0456))
         }
     }
 

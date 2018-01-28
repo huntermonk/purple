@@ -1,7 +1,7 @@
 import SceneKit
 
 enum Sticker {
-    case angel, brazzers, drake, kanyeGlasses, lightbulb, missiles, mustache, sunglasses
+    case angel, brazzers, drake, kanyeGlasses, lightbulb, missiles//, mustache, sunglasses
 
     var title: String {
         switch self {
@@ -17,10 +17,10 @@ enum Sticker {
             return "💡"
         case .missiles:
             return "💥"
-        case .mustache:
-            return "👨🏽"
-        case .sunglasses:
-            return "🕶"
+//        case .mustache:
+//            return "👨🏽"
+//        case .sunglasses:
+//            return "🕶"
         }
     }
 
@@ -32,8 +32,8 @@ enum Sticker {
             kanyeGlasses,
             lightbulb,
             missiles,
-            mustache,
-            sunglasses
+//            mustache,
+//            sunglasses
         ]
     }
 }
