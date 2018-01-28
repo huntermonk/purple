@@ -1,12 +1,31 @@
 PODS:
+  - BrightFutures (6.0.0):
+    - Result (~> 3.2.4)
   - Mixpanel (3.2.6)
+  - Result (3.2.4)
+  - SceneKitVideoRecorder (1.5.1):
+    - BrightFutures
 
 DEPENDENCIES:
   - Mixpanel
+  - SceneKitVideoRecorder (from `https://github.com/svtek/SceneKitVideoRecorder.git`, branch `swift4`)
+
+EXTERNAL SOURCES:
+  SceneKitVideoRecorder:
+    :branch: swift4
+    :git: https://github.com/svtek/SceneKitVideoRecorder.git
+
+CHECKOUT OPTIONS:
+  SceneKitVideoRecorder:
+    :commit: 71e239324b2a0366ab3a499e076f70ced50d7a70
+    :git: https://github.com/svtek/SceneKitVideoRecorder.git
 
 SPEC CHECKSUMS:
+  BrightFutures: 9e7604f511aed9f0d6a49b04ac9b3fca6b117758
   Mixpanel: 2304449c3580927db15c894652a6e135aafae8f5
+  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SceneKitVideoRecorder: a8b42606f488c2c8cab6be622201d5036c1bd12d
 
-PODFILE CHECKSUM: f0d5c820b49b56d14738926b53fbce40937fb399
+PODFILE CHECKSUM: 7f9c261db75c14b2f984755ac80c7dc7fe76d2b3
 
 COCOAPODS: 1.3.1

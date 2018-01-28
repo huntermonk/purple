@@ -1,21 +1,26 @@
 import SpriteKit
 import ARKit
-import ARVideoKit
+import Photos
 import Mixpanel
+import SceneKitVideoRecorder
 
 class CameraController: UIViewController {
 
     private var currentSticker: Sticker?
-    private var recorder: RecordAR!
     @IBOutlet var sceneView: ARSCNView!
-
+    private var recorder: SceneKitVideoRecorder!
     override func prefersHomeIndicatorAutoHidden() -> Bool {
         return true
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        recorder = RecordAR(ARSceneKit: sceneView)
+        var options = SceneKitVideoRecorder.Options.default
+        let scale = UIScreen.main.nativeScale
+        let sceneSize = sceneView.bounds.size
+        options.videoSize = CGSize(width: sceneSize.width * scale, height: sceneSize.height * scale)
+        recorder = try! SceneKitVideoRecorder(withARSCNView: sceneView, options: options)
+
         sceneView.delegate = self
         sceneView.showsStatistics = false
 
@@ -26,13 +31,11 @@ class CameraController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let config = ARWorldTrackingConfiguration()
-        recorder.prepare(config)
         sceneView.session.run(config)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        recorder.rest()
         sceneView.session.pause()
     }
 
@@ -76,19 +79,29 @@ class CameraController: UIViewController {
     }
 
     private func beginRecording() {
-        recorder.record()
+        _ = recorder.startWriting()
         Mixpanel.sharedInstance()?.timeEvent("Record")
     }
 
     private func endRecording() {
         Mixpanel.sharedInstance()?.track("Record")
-        recorder.stopAndExport { [weak self] _, _, success in
-            let title = success ? "Recording Saved" : "Recording Failed"
-            let message = success ? "Your recording was saved to your camera roll." : "Your recording failed when saving to camera roll."
+        recorder.finishWriting().onSuccess { [weak self] url in
+            self?.finishRecording(url: url)
+        }
+    }
 
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self?.present(alert, animated: true, completion: nil)
+    private func finishRecording(url: URL) {
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: url)
+        }) { [weak self] success, _ in
+            DispatchQueue.main.async {
+                let title = success ? "Recording Saved" : "Recording Failed"
+                let message = success ? "Your recording was saved to your camera roll." : "Your recording failed when saving to camera roll."
+
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self?.present(alert, animated: true, completion: nil)
+            }
         }
     }
 

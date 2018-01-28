@@ -7,5 +7,6 @@ target 'stupid' do
 
   # Pods for stupid
   pod 'Mixpanel'
+  pod 'SceneKitVideoRecorder', :git => 'https://github.com/svtek/SceneKitVideoRecorder.git', :branch => 'swift4'
 
 end
