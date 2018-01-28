@@ -1,6 +1,7 @@
 import SpriteKit
 import ARKit
 import ARVideoKit
+import Mixpanel
 
 class CameraController: UIViewController {
 
@@ -76,9 +77,11 @@ class CameraController: UIViewController {
 
     private func beginRecording() {
         recorder.record()
+        Mixpanel.sharedInstance()?.timeEvent("Record")
     }
 
     private func endRecording() {
+        Mixpanel.sharedInstance()?.track("Record")
         recorder.stopAndExport { [weak self] _, _, success in
             let title = success ? "Recording Saved" : "Recording Failed"
             let message = success ? "Your recording was saved to your camera roll." : "Your recording failed when saving to camera roll."
@@ -120,6 +123,8 @@ extension CameraController: ARSCNViewDelegate {
         guard let sticker = currentSticker else {
             return nil
         }
+
+        Mixpanel.sharedInstance()?.track("Placed Effect", properties: ["Name" : sticker.title])
 
         let node = SCNNode(sticker: sticker)
 

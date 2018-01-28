@@ -25,9 +25,9 @@
 		6590F1AC1FE5F0020029A016 /* missiles.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6590F1AA1FE5F0010029A016 /* missiles.mp4 */; };
 		65AB061E1FE5C71D0015444C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061D1FE5C71D0015444C /* UIView.swift */; };
 		65AB06201FE5C9600015444C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061F1FE5C95F0015444C /* UIViewController.swift */; };
-		65C3934E1FE60CED00334080 /* ARVideoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C3934D1FE60CED00334080 /* ARVideoKit.framework */; };
 		65C3934F1FE60CF300334080 /* ARVideoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C3934D1FE60CED00334080 /* ARVideoKit.framework */; };
 		65C393501FE60CF300334080 /* ARVideoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65C3934D1FE60CED00334080 /* ARVideoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85054B284A7D29C5A0FADDBF /* Pods_stupid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E19EFF1C09A412F7A2B8EF7 /* Pods_stupid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C10DD4A12B4EFFEFB08C615 /* Pods-stupid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stupid.release.xcconfig"; path = "Pods/Target Support Files/Pods-stupid/Pods-stupid.release.xcconfig"; sourceTree = "<group>"; };
 		658960781FE5ADBA00DA5DB4 /* stupid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stupid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6589607B1FE5ADBA00DA5DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		658960841FE5ADBA00DA5DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +67,8 @@
 		65AB061D1FE5C71D0015444C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		65AB061F1FE5C95F0015444C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		65C3934D1FE60CED00334080 /* ARVideoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ARVideoKit.framework; sourceTree = "<group>"; };
+		9E19EFF1C09A412F7A2B8EF7 /* Pods_stupid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stupid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC20BBAC4D6F326DD3AB02F4 /* Pods-stupid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stupid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stupid/Pods-stupid.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,18 +77,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				65C3934F1FE60CF300334080 /* ARVideoKit.framework in Frameworks */,
-				65C3934E1FE60CED00334080 /* ARVideoKit.framework in Frameworks */,
+				85054B284A7D29C5A0FADDBF /* Pods_stupid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AE73BB4AC20B82CDF121C2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC20BBAC4D6F326DD3AB02F4 /* Pods-stupid.debug.xcconfig */,
+				3C10DD4A12B4EFFEFB08C615 /* Pods-stupid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		643C963E8A0ECA80B7FE5DD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E19EFF1C09A412F7A2B8EF7 /* Pods_stupid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6589606F1FE5ADBA00DA5DB4 = {
 			isa = PBXGroup;
 			children = (
 				6589607A1FE5ADBA00DA5DB4 /* stupid */,
 				658960791FE5ADBA00DA5DB4 /* Products */,
+				2AE73BB4AC20B82CDF121C2E /* Pods */,
+				643C963E8A0ECA80B7FE5DD3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,10 +177,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6589608E1FE5ADBA00DA5DB4 /* Build configuration list for PBXNativeTarget "stupid" */;
 			buildPhases = (
+				A4D02430B1A240A3ADF7412B /* [CP] Check Pods Manifest.lock */,
 				658960741FE5ADBA00DA5DB4 /* Sources */,
 				658960751FE5ADBA00DA5DB4 /* Frameworks */,
 				658960761FE5ADBA00DA5DB4 /* Resources */,
 				65F2E05C1FE60CA7002F4AD8 /* Embed Frameworks */,
+				16F302E30609204609E14149 /* [CP] Embed Pods Frameworks */,
+				135CEB2B4455358BFA95E11B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,6 +244,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		135CEB2B4455358BFA95E11B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stupid/Pods-stupid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16F302E30609204609E14149 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-stupid/Pods-stupid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Mixpanel/Mixpanel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mixpanel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stupid/Pods-stupid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4D02430B1A240A3ADF7412B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stupid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		658960741FE5ADBA00DA5DB4 /* Sources */ = {
@@ -370,6 +449,7 @@
 		};
 		6589608F1FE5ADBA00DA5DB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC20BBAC4D6F326DD3AB02F4 /* Pods-stupid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +460,7 @@
 					"$(PROJECT_DIR)/stupid",
 				);
 				INFOPLIST_FILE = stupid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.stupid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,6 +471,7 @@
 		};
 		658960901FE5ADBA00DA5DB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C10DD4A12B4EFFEFB08C615 /* Pods-stupid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -400,6 +482,7 @@
 					"$(PROJECT_DIR)/stupid",
 				);
 				INFOPLIST_FILE = stupid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huntermaximillionmonk.stupid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
