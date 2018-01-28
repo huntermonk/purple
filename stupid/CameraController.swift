@@ -64,6 +64,7 @@ class CameraController: UIViewController {
     private func addStickerButton() {
         let button = UIButton()
         button.setImage(#imageLiteral(resourceName: "sticker"), for: .normal)
+        button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(button)
         button.constrain(size: CGSize(width: 40, height: 40))
