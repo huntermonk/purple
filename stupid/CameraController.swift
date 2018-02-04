@@ -40,7 +40,10 @@ class CameraController: UIViewController {
     }
 
     private func addAtHit(touches: Set<UITouch>) {
-        addAnchor(distance: 2, camera: sceneView.session.currentFrame!.camera.transform)
+        guard let frame = sceneView.session.currentFrame else {
+            return
+        }
+        addAnchor(distance: 2, camera: frame.camera.transform)
     }
 
     private func addAnchor(distance: Float, camera: matrix_float4x4) {
@@ -106,6 +109,9 @@ class CameraController: UIViewController {
     }
 
     @objc private func recordPressed(button: UIButton) {
+        guard sceneView.session.currentFrame != nil else {
+            return
+        }
         button.isSelected = !button.isSelected
 
         if button.isSelected {
