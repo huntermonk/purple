@@ -4,11 +4,16 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Camera Controller-->
         <scene sceneID="9XI-2b-0TS">
@@ -24,16 +29,50 @@
                                     <outlet property="delegate" destination="z2M-3K-AmE" id="Tsa-kP-jx9"/>
                                 </connections>
                             </arscnView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9x8-xi-A2d" userLabel="Camera Access">
+                                <rect key="frame" x="88" y="175" width="200" height="338.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Access!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQb-Ku-iDO">
+                                        <rect key="frame" x="6.5" y="0.0" width="187.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OL-aW-OeW">
+                                        <rect key="frame" x="0.0" y="45" width="200" height="157.5"/>
+                                        <string key="text">This app needs access to your camera to work. That's just so you can add effects to your videos.
+
+To enable, go to Settings ➡️ Purple, and make sure the Camera toggle is switched to on, as pictured.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="zZI-9D-uAv">
+                                        <rect key="frame" x="0.0" y="218.5" width="200" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="yZ9-Zb-dmT"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4m0-BS-gIs"/>
+                                    <constraint firstItem="1OL-aW-OeW" firstAttribute="width" secondItem="9x8-xi-A2d" secondAttribute="width" id="FbA-b2-dMr"/>
+                                    <constraint firstItem="zZI-9D-uAv" firstAttribute="width" secondItem="9x8-xi-A2d" secondAttribute="width" id="dBD-CP-Ye2"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="9x8-xi-A2d" firstAttribute="centerY" secondItem="8YL-II-eZh" secondAttribute="centerY" id="JJ3-OV-M7k"/>
                             <constraint firstItem="ROd-uj-buY" firstAttribute="bottom" secondItem="24w-bA-fPQ" secondAttribute="bottom" id="Uoa-cS-8co"/>
                             <constraint firstItem="ROd-uj-buY" firstAttribute="leading" secondItem="24w-bA-fPQ" secondAttribute="leading" id="XnX-L0-p1V"/>
+                            <constraint firstItem="9x8-xi-A2d" firstAttribute="centerX" secondItem="8YL-II-eZh" secondAttribute="centerX" id="cBT-YS-BJG"/>
                             <constraint firstItem="ROd-uj-buY" firstAttribute="trailing" secondItem="24w-bA-fPQ" secondAttribute="trailing" id="fBP-Qh-h8y"/>
                             <constraint firstItem="ROd-uj-buY" firstAttribute="top" secondItem="24w-bA-fPQ" secondAttribute="top" id="taL-Mu-aho"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8YL-II-eZh"/>
                     </view>
                     <connections>
+                        <outlet property="cameraAccessWarning" destination="9x8-xi-A2d" id="qQI-Yc-BP8"/>
                         <outlet property="sceneView" destination="ROd-uj-buY" id="CwU-3c-Jec"/>
                     </connections>
                 </viewController>
@@ -42,4 +81,7 @@
             <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="1125" height="738"/>
+    </resources>
 </document>

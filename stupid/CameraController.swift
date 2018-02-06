@@ -6,6 +6,7 @@ import SceneKitVideoRecorder
 
 class CameraController: UIViewController {
 
+    @IBOutlet weak var cameraAccessWarning: UIStackView!
     private var currentSticker: Sticker?
     @IBOutlet var sceneView: ARSCNView!
     private var recorder: SceneKitVideoRecorder!
@@ -137,6 +138,16 @@ class CameraController: UIViewController {
 }
 
 extension CameraController: ARSCNViewDelegate {
+
+    func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
+        let hidden = AVCaptureDevice.authorizationStatus(for: .video) != .denied
+        guard cameraAccessWarning.isHidden != hidden else {
+            return
+        }
+        DispatchQueue.main.async {
+            self.cameraAccessWarning.isHidden = hidden
+        }
+    }
 
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let sticker = currentSticker else {
