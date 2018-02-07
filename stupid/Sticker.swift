@@ -24,6 +24,10 @@ enum Sticker {
         }
     }
 
+    var image: UIImage {
+        return UIImage(named: title)!
+    }
+
     static var all: [Sticker] {
         return [
             angel,

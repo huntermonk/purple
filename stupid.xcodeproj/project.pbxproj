@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651EB0DB202BB6EB00142F3A /* StickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651EB0DA202BB6EB00142F3A /* StickerTableViewCell.xib */; };
+		651EB0DD202BB6F400142F3A /* StickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651EB0DC202BB6F400142F3A /* StickerTableViewCell.swift */; };
 		6589607C1FE5ADBA00DA5DB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589607B1FE5ADBA00DA5DB4 /* AppDelegate.swift */; };
 		658960851FE5ADBA00DA5DB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658960831FE5ADBA00DA5DB4 /* Main.storyboard */; };
 		658960871FE5ADBA00DA5DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658960861FE5ADBA00DA5DB4 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		3C10DD4A12B4EFFEFB08C615 /* Pods-stupid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stupid.release.xcconfig"; path = "Pods/Target Support Files/Pods-stupid/Pods-stupid.release.xcconfig"; sourceTree = "<group>"; };
+		651EB0DA202BB6EB00142F3A /* StickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerTableViewCell.xib; sourceTree = "<group>"; };
+		651EB0DC202BB6F400142F3A /* StickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerTableViewCell.swift; sourceTree = "<group>"; };
 		658960781FE5ADBA00DA5DB4 /* stupid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stupid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6589607B1FE5ADBA00DA5DB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		658960841FE5ADBA00DA5DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				6590F1A31FE5E92E0029A016 /* MaskedMaterial.swift */,
 				6590F1971FE5D3820029A016 /* Sticker.swift */,
 				6590F1951FE5D3340029A016 /* StickersTableViewController.swift */,
+				651EB0DC202BB6F400142F3A /* StickerTableViewCell.swift */,
+				651EB0DA202BB6EB00142F3A /* StickerTableViewCell.xib */,
 				6590F1A71FE5E9900029A016 /* Syncer.swift */,
 				6590F1A51FE5E94F0029A016 /* VideoContent.swift */,
 			);
@@ -228,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6590F1AB1FE5F0020029A016 /* missiles-mask.mp4 in Resources */,
+				651EB0DB202BB6EB00142F3A /* StickerTableViewCell.xib in Resources */,
 				6589608A1FE5ADBA00DA5DB4 /* LaunchScreen.storyboard in Resources */,
 				658960871FE5ADBA00DA5DB4 /* Assets.xcassets in Resources */,
 				6590F1AC1FE5F0020029A016 /* missiles.mp4 in Resources */,
@@ -305,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65AB061E1FE5C71D0015444C /* UIView.swift in Sources */,
+				651EB0DD202BB6F400142F3A /* StickerTableViewCell.swift in Sources */,
 				658960961FE5BC6000DA5DB4 /* ARSCNView.swift in Sources */,
 				6590F1961FE5D3340029A016 /* StickersTableViewController.swift in Sources */,
 				6590F1A61FE5E94F0029A016 /* VideoContent.swift in Sources */,

@@ -28,6 +28,8 @@ final class StickersTableViewController: UITableViewController {
         let size = CGSize(width: 100, height: 400)
         tableView.frame = CGRect(origin: CGPoint.zero, size: size)
         preferredContentSize = size
+
+        table.register(UINib.init(nibName: StickerTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: "Sticker")
     }
 }
 
@@ -49,9 +51,8 @@ extension StickersTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = stickers[indexPath.row].title
-        cell.backgroundColor = .clear
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Sticker", for: indexPath) as! StickerTableViewCell
+        cell.setup(with: stickers[indexPath.row])
         return cell
     }
 
