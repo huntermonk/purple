@@ -27,6 +27,7 @@
 		6590F1AC1FE5F0020029A016 /* missiles.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6590F1AA1FE5F0010029A016 /* missiles.mp4 */; };
 		65AB061E1FE5C71D0015444C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061D1FE5C71D0015444C /* UIView.swift */; };
 		65AB06201FE5C9600015444C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061F1FE5C95F0015444C /* UIViewController.swift */; };
+		65D39324202BD5760063054D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65D39323202BD5760063054D /* GoogleService-Info.plist */; };
 		85054B284A7D29C5A0FADDBF /* Pods_stupid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E19EFF1C09A412F7A2B8EF7 /* Pods_stupid.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		6590F1AA1FE5F0010029A016 /* missiles.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = missiles.mp4; sourceTree = "<group>"; };
 		65AB061D1FE5C71D0015444C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		65AB061F1FE5C95F0015444C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		65D39323202BD5760063054D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E19EFF1C09A412F7A2B8EF7 /* Pods_stupid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stupid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC20BBAC4D6F326DD3AB02F4 /* Pods-stupid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stupid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stupid/Pods-stupid.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 				6589607B1FE5ADBA00DA5DB4 /* AppDelegate.swift */,
 				658960861FE5ADBA00DA5DB4 /* Assets.xcassets */,
 				6589608B1FE5ADBA00DA5DB4 /* Info.plist */,
+				65D39323202BD5760063054D /* GoogleService-Info.plist */,
 				658960881FE5ADBA00DA5DB4 /* LaunchScreen.storyboard */,
 				658960831FE5ADBA00DA5DB4 /* Main.storyboard */,
 			);
@@ -235,6 +238,7 @@
 			files = (
 				6590F1AB1FE5F0020029A016 /* missiles-mask.mp4 in Resources */,
 				651EB0DB202BB6EB00142F3A /* StickerTableViewCell.xib in Resources */,
+				65D39324202BD5760063054D /* GoogleService-Info.plist in Resources */,
 				6589608A1FE5ADBA00DA5DB4 /* LaunchScreen.storyboard in Resources */,
 				658960871FE5ADBA00DA5DB4 /* Assets.xcassets in Resources */,
 				6590F1AC1FE5F0020029A016 /* missiles.mp4 in Resources */,
@@ -270,16 +274,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-stupid/Pods-stupid-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Mixpanel/Mixpanel.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SceneKitVideoRecorder/SceneKitVideoRecorder.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BrightFutures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mixpanel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SceneKitVideoRecorder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
