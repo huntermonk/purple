@@ -9,5 +9,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.isIdleTimerDisabled = true
         FirebaseApp.configure()
         Mixpanel.sharedInstance(withToken: "adac3b2ae091933e0168a8d332386163")
+        _ = AreWe.shared
     }
 }

@@ -2,12 +2,25 @@ import UIKit
 
 final class StickersTableViewController: UITableViewController {
 
-    private var stickers = Sticker.all
+    private var stickers = Sticker.allExceptDrake
     var selected: (Sticker) -> Void
 
     init(selected: @escaping (Sticker) -> Void) {
         self.selected = selected
         super.init(style: .plain)
+
+        guard !AreWe.shared.inProduction else {
+            stickers.insert(Sticker.drake, at: 2)
+            tableView.reloadData()
+            return
+        }
+
+        AreWe.shared.receivedInProduction = { [weak self] inProduction in
+            if inProduction {
+                self?.stickers.insert(Sticker.drake, at: 2)
+                self?.tableView.reloadData()
+            }
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {

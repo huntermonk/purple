@@ -28,16 +28,15 @@ enum Sticker {
         return UIImage(named: title)!
     }
 
-    static var all: [Sticker] {
+    static var allExceptDrake: [Sticker] {
         return [
             angel,
             brazzers,
-            drake,
             kanyeGlasses,
             lightbulb,
             missiles,
-//            mustache,
-//            sunglasses
+            //            mustache,
+            //            sunglasses
         ]
     }
 }
