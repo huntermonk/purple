@@ -9,5 +9,6 @@ target 'stupid' do
   pod 'Mixpanel'
   pod 'SceneKitVideoRecorder', :git => 'https://github.com/svtek/SceneKitVideoRecorder.git', :branch => 'swift4'
   pod 'Firebase'
+  pod 'FirebaseDatabase'
 
 end

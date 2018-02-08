@@ -28,6 +28,7 @@
 		65AB061E1FE5C71D0015444C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061D1FE5C71D0015444C /* UIView.swift */; };
 		65AB06201FE5C9600015444C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AB061F1FE5C95F0015444C /* UIViewController.swift */; };
 		65D39324202BD5760063054D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65D39323202BD5760063054D /* GoogleService-Info.plist */; };
+		65D39329202BD61B0063054D /* AreWe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D39328202BD61B0063054D /* AreWe.swift */; };
 		85054B284A7D29C5A0FADDBF /* Pods_stupid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E19EFF1C09A412F7A2B8EF7 /* Pods_stupid.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		65AB061D1FE5C71D0015444C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		65AB061F1FE5C95F0015444C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		65D39323202BD5760063054D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65D39328202BD61B0063054D /* AreWe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreWe.swift; sourceTree = "<group>"; };
 		9E19EFF1C09A412F7A2B8EF7 /* Pods_stupid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stupid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC20BBAC4D6F326DD3AB02F4 /* Pods-stupid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stupid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stupid/Pods-stupid.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				65D39327202BD6080063054D /* Stickers Table */,
 				658960991FE5BC8000DA5DB4 /* Supporting Files */,
 				6590F19E1FE5E8520029A016 /* Videos */,
+				65D39328202BD61B0063054D /* AreWe.swift */,
 				658960911FE5BC1000DA5DB4 /* CameraController.swift */,
 				6590F1A31FE5E92E0029A016 /* MaskedMaterial.swift */,
 				6590F1971FE5D3820029A016 /* Sticker.swift */,
@@ -286,6 +289,7 @@
 				"${BUILT_PRODUCTS_DIR}/Mixpanel/Mixpanel.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SceneKitVideoRecorder/SceneKitVideoRecorder.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -295,6 +299,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mixpanel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SceneKitVideoRecorder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +335,7 @@
 				65AB061E1FE5C71D0015444C /* UIView.swift in Sources */,
 				651EB0DD202BB6F400142F3A /* StickerTableViewCell.swift in Sources */,
 				658960961FE5BC6000DA5DB4 /* ARSCNView.swift in Sources */,
+				65D39329202BD61B0063054D /* AreWe.swift in Sources */,
 				6590F1961FE5D3340029A016 /* StickersTableViewController.swift in Sources */,
 				6590F1A61FE5E94F0029A016 /* VideoContent.swift in Sources */,
 				6590F1A41FE5E92E0029A016 /* MaskedMaterial.swift in Sources */,

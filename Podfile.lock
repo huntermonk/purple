@@ -13,11 +13,16 @@ PODS:
     - nanopb (~> 0.3)
   - FirebaseCore (4.0.14):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseDatabase (4.1.4):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.8):
     - FirebaseCore (~> 4.0)
   - GoogleToolboxForMac/Defines (2.1.3)
   - GoogleToolboxForMac/NSData+zlib (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
+  - leveldb-library (1.20)
   - Mixpanel (3.2.6)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -30,6 +35,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase
+  - FirebaseDatabase
   - Mixpanel
   - SceneKitVideoRecorder (from `https://github.com/svtek/SceneKitVideoRecorder.git`, branch `swift4`)
 
@@ -48,13 +54,15 @@ SPEC CHECKSUMS:
   Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseCore: 2e0b98fb2d64ca8140136beff15772bdd14d2dd7
+  FirebaseDatabase: de4446507ccd3257fca37d16f40e1540324571fd
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Mixpanel: 2304449c3580927db15c894652a6e135aafae8f5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SceneKitVideoRecorder: a8b42606f488c2c8cab6be622201d5036c1bd12d
 
-PODFILE CHECKSUM: c2b46f4169fb66dbe33c31e3d432a80c2f405d98
+PODFILE CHECKSUM: 391bc26aaef2df3bab2c812b1e28c2dccdeefabf
 
 COCOAPODS: 1.4.0
