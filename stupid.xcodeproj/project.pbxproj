@@ -124,14 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				658960971FE5BC6D00DA5DB4 /* Extensions */,
+				65D39327202BD6080063054D /* Stickers Table */,
 				658960991FE5BC8000DA5DB4 /* Supporting Files */,
 				6590F19E1FE5E8520029A016 /* Videos */,
 				658960911FE5BC1000DA5DB4 /* CameraController.swift */,
 				6590F1A31FE5E92E0029A016 /* MaskedMaterial.swift */,
 				6590F1971FE5D3820029A016 /* Sticker.swift */,
-				6590F1951FE5D3340029A016 /* StickersTableViewController.swift */,
-				651EB0DC202BB6F400142F3A /* StickerTableViewCell.swift */,
-				651EB0DA202BB6EB00142F3A /* StickerTableViewCell.xib */,
 				6590F1A71FE5E9900029A016 /* Syncer.swift */,
 				6590F1A51FE5E94F0029A016 /* VideoContent.swift */,
 			);
@@ -171,6 +169,16 @@
 				6590F1AA1FE5F0010029A016 /* missiles.mp4 */,
 			);
 			name = Videos;
+			sourceTree = "<group>";
+		};
+		65D39327202BD6080063054D /* Stickers Table */ = {
+			isa = PBXGroup;
+			children = (
+				6590F1951FE5D3340029A016 /* StickersTableViewController.swift */,
+				651EB0DC202BB6F400142F3A /* StickerTableViewCell.swift */,
+				651EB0DA202BB6EB00142F3A /* StickerTableViewCell.xib */,
+			);
+			name = "Stickers Table";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
